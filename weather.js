@@ -82,7 +82,9 @@ $(document).ready(function() {
         $("#update-time").append(currentHour + ':' + currentMin);
         $(".date-display").append(currentMonth + ', ' + currentDay + ' ' + currentDate);
     }
-    $("#weather-update").click(updateTime);
+    $("#weather-update").click(function() {
+        updateTime();
+    });
 
     // Convert numeric equivalent of months into text (Ex: 0 = January)
     function getMonth() {
